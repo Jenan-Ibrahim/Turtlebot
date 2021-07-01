@@ -72,7 +72,7 @@ $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
  CTRL-C to quit
 ```
-**11.When the map is created successfully, open a new terminal to save the map:**
+**11. When the map is created successfully, open a new terminal to save the map:**
 ```
 $ rosrun map_server map_saver -f ~/map
 ```
