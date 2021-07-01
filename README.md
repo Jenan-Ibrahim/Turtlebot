@@ -1,9 +1,9 @@
 # TurtleBot3
-**1. Install VM with ubuntu 18.04**
+**_1. Install VM with ubuntu 18.04._**
 
-**2. Install ROS Melodic**
+**_2. Install ROS Melodic._**
 
-**3. Open a terminal and use the following commands for installing ROS 1 on remote PC:**
+**_3. Open a terminal and use the following commands for installing ROS 1 on remote PC:_**
 ```
 $ sudo apt-get update
 $ sudo apt-get upgrade
@@ -11,7 +11,7 @@ $ wget https://raw.githubusercontent.com/ROBOTIS-GIT/robotis_tools/master/instal
 $ chmod 755 ./install_ros_melodic.sh 
 $ bash ./install_ros_melodic.sh
 ```
-**4. Install Dependent ROS 1 Packages:**
+**_4. Install Dependent ROS 1 Packages:_**
 ```
 $ sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy \
   ros-melodic-teleop-twist-keyboard ros-melodic-laser-proc \
@@ -23,37 +23,37 @@ $ sudo apt-get install ros-melodic-joy ros-melodic-teleop-twist-joy \
   ros-melodic-compressed-image-transport ros-melodic-rqt* \
   ros-melodic-gmapping ros-melodic-navigation ros-melodic-interactive-markers
 ```
-**5. Install TurtleBot3 Packages:**
+**_5. Install TurtleBot3 Packages:_**
 ```
 $ sudo apt-get install ros-melodic-dynamixel-sdk
 $ sudo apt-get install ros-melodic-turtlebot3-msgs
 $ sudo apt-get install ros-melodic-turtlebot3
 ```
-**6. Set TurtleBot3 Model Name:**
+**_6. Set TurtleBot3 Model Name:_**
 
-_In case of TurtleBot3 Burger_
+_-In case of TurtleBot3 Burger_
 ```
 $ echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
 ```
-_In case of TurtleBot3 Waffle Pi_
+_-In case of TurtleBot3 Waffle Pi_
 ```
 $ echo "export TURTLEBOT3_MODEL=waffle_pi" >> ~/.bashrc
 ```
-**7. Install Simulation Package:**
+**_7. Install Simulation Package:_**
 ```
 $ cd ~/catkin_ws/src/
 $ git clone -b melodic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 $ cd ~/catkin_ws && catkin_make
 ```
-**8. Launch Simulation World:**
+**_8. Launch Simulation World:_**
 ```
 $ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 ```
-**9. Run SLAM Node:**
+**_9. Run SLAM Node:_**
 ```
 $ roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
 ```
-**10. Operate TurtleBot3:**
+**_10. Operate TurtleBot3:_**
 
 _In order to teleoperate the TurtleBot3 with the keyboard, launch the teleoperation node with below command in a new terminal window._
 ```
@@ -72,7 +72,7 @@ $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
 
  CTRL-C to quit
 ```
-**11. When the map is created successfully, open a new terminal to save the map:**
+**_11. When the map is created successfully, open a new terminal to save the map:_**
 ```
 $ rosrun map_server map_saver -f ~/map
 ```
